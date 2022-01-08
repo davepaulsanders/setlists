@@ -10,8 +10,16 @@ const initialState = [
 const SetListSlice = createSlice({
   name: "SetListSlice",
   initialState,
-  reducers: {},
+  reducers: {
+    addSong: (state, action) => {
+      const newSong = {
+        title: action.payload.title,
+        bpm: action.payload.bpm,
+      };
+      state.setlist.push(newSong);
+    },
+  },
 });
 
-export const {} = SetListSlice.actions;
+export const { addSong } = SetListSlice.actions;
 export default SetListSlice.reducer;

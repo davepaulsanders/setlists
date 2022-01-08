@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = [
   {
+    id: Date.now(),
     title: "song1",
     bpm: 150,
   },
@@ -20,7 +21,8 @@ const SetListSlice = createSlice({
       state.push(newSong);
     },
     deleteSong: (state, action) => {
-      state.filter((song) => song !== action.payload.id);
+      console.log(action.payload.id);
+      return state.filter((song) => song.id !== action.payload.id);
     },
   },
 });

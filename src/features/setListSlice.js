@@ -13,6 +13,14 @@ const SetListSlice = createSlice({
   initialState,
   reducers: {
     addSong: (state, action) => {
+      const existsInArray = state.some(
+        (song) => song.title === action.payload.title
+      );
+      if (existsInArray) {
+        window.alert("Already in setlist!");
+        return;
+      }
+      console.log(existsInArray);
       const newSong = {
         id: Date.now(),
         title: action.payload.title,
@@ -21,7 +29,6 @@ const SetListSlice = createSlice({
       state.push(newSong);
     },
     deleteSong: (state, action) => {
-      console.log(action.payload.id);
       return state.filter((song) => song.id !== action.payload.id);
     },
   },

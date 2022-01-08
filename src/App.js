@@ -5,8 +5,10 @@ import SetListItems from "../src/components/setListItems/setListItems";
 export const App = () => {
   return (
     <div className="App">
-      <h1>Setlist</h1>
+      <h1 className="page-title">Setlist</h1>
+      <hr></hr>
       <SetListItems />
+      <hr></hr>
       <SetListForm />
     </div>
   );

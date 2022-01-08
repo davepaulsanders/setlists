@@ -1,4 +1,22 @@
-p {
-    display: inline-block;
+.songs-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 1rem;
+}
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+p {
+    margin: 1rem;
+}
+
+.delete-button {
+    color: white;
+    background-color: black;
+    border: 2px solid red;
+    padding: .2rem .4rem .2rem .4rem;
 }

@@ -13,13 +13,17 @@ const SetListSlice = createSlice({
   reducers: {
     addSong: (state, action) => {
       const newSong = {
+        id: Date.now(),
         title: action.payload.title,
         bpm: action.payload.bpm,
       };
-      state.setlist.push(newSong);
+      state.push(newSong);
+    },
+    deleteSong: (state, action) => {
+      state.filter((song) => song !== action.payload.id);
     },
   },
 });
 
-export const { addSong } = SetListSlice.actions;
+export const { addSong, deleteSong } = SetListSlice.actions;
 export default SetListSlice.reducer;

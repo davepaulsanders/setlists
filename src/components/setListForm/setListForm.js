@@ -34,11 +34,12 @@ export const SetListForm = () => {
         </label>
         <input
           className="form-elements"
-          placeholder="40"
+          placeholder="BPM"
           id="bpm"
           name="bpm"
           min="40"
           max="400"
+          step="1"
           bpm={value}
           onChange={(event) => setBPM(event.target.value)}
         ></input>

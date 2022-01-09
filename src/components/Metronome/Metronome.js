@@ -1,13 +1,21 @@
-import { React, useState } from "react";
+import { React } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { changeBPM } from "../../features/MetronomeSlice";
 import "./Metronome.css";
+
 function Metronome() {
-  const [bpm, changeBPM] = useState(220);
+  const bpm = useSelector((state) => state.metronome.bpm);
+  const dispatch = useDispatch();
 
   const handleChange = (event) => {
-    changeBPM(event.target.value);
+    dispatch(changeBPM({ bpm: event.target.value }));
+  };
+  const handleClick = () => {
+    const metronome = document.getElementById("metronome");
+    metronome.style.border = "1px solid red";
   };
   return (
-    <div className="metronome">
+    <div className="metronome" id="metronome">
       <p>{`${bpm} BPM`}</p>
       <div className="metronome-bpm-control">
         <button>-</button>
@@ -17,13 +25,14 @@ function Metronome() {
           step="1"
           min="40"
           max="400"
-          defaultValue="220"
+          value={bpm}
           onChange={handleChange}
         ></input>
         <button>+</button>
       </div>
-
-      <button className="start-stop">Start</button>
+      <button className="start-stop" onClick={handleClick}>
+        Start
+      </button>
       <span className="mute-sound"></span>
     </div>
   );

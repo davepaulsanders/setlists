@@ -4,14 +4,16 @@ import { changeBPM } from "../../features/MetronomeSlice";
 import "./Metronome.css";
 
 function Metronome() {
-  let bpm = useSelector((state) => state.metronome.bpm);
+  let bpm = useSelector((state) => state.MetronomeSlice.bpm);
+
+  let isRunning = useSelector((state) => state.MetronomeSlice.isRunning);
 
   const dispatch = useDispatch();
   // milli is bpm converted to milliseconds
   const milli = 60000 / bpm;
   //setting up timeout, selectors, and variables for metronome
   let timeout;
-  let isRunning = false;
+
   const milliString = milli.toString();
 
   //function to make metronome flash
@@ -42,16 +44,16 @@ function Metronome() {
   };
   const addOne = () => {
     const newBPM = bpm + 1;
-    dispatch(changeBPM({ bpm: newBPM }));
+    dispatch(changeBPM(newBPM));
   };
   const subtractOne = () => {
     const newBPM = bpm - 1;
-    dispatch(changeBPM({ bpm: newBPM }));
+    dispatch(changeBPM(newBPM));
   };
   const handleChange = (event) => {
     let switchToNumber = Number(event.target.value);
     stopMetronome();
-    dispatch(changeBPM({ bpm: switchToNumber }));
+    dispatch(changeBPM(switchToNumber));
     startMetronome();
   };
   const handleClick = () => {

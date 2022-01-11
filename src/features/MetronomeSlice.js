@@ -10,6 +10,10 @@ const MetronomeSlice = createSlice({
   initialState,
   reducers: {
     changeBPM: (state, action) => {
+      state.bpm = action.payload;
+      //Can't figure out how to properly update the state
+    },
+    changeIsRunning: (state, action) => {
       return (state = action.payload);
     },
   },

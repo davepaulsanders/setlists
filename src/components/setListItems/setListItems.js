@@ -6,7 +6,7 @@ import { changeBPM } from "../../features/MetronomeSlice";
 function SetListItems({ title, bpm, id }) {
   const dispatch = useDispatch();
   const selectSong = (event) => {
-    dispatch(changeBPM({ bpm: bpm }));
+    dispatch(changeBPM(bpm));
   };
   const handleClick = () => {
     dispatch(deleteSong({ id: id }));

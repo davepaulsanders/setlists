@@ -8,8 +8,8 @@ function Metronome() {
   const dispatch = useDispatch();
   // milli is bpm converted to milliseconds
   const milli = 60000 / bpm;
-  //setting up interval, selectors, and variables for metronome
-  let interval;
+  //setting up timeout, selectors, and variables for metronome
+  let timeout;
   let isRunning = false;
   const milliString = milli.toString();
 
@@ -23,19 +23,20 @@ function Metronome() {
   };
   //function to start metronome
   const startMetronome = () => {
-    if (!interval) {
-      interval = setInterval(metronomeFlash, milli);
+    console.log(timeout);
+    if (!timeout & (isRunning === false)) {
+      timeout = setTimeout(metronomeFlash, milli);
       isRunning = true;
     }
   };
   const stopMetronome = () => {
     const metronome = document.getElementById("metronome");
     const startStop = document.getElementById("startStop");
-    metronome.style.animationName = "";
-    metronome.style.animationDuration = "";
+    metronome.style.animationName = null;
+    metronome.style.animationDuration = null;
     startStop.innerHTML = "Start";
-    clearInterval(interval);
-    interval = null;
+    clearTimeout(timeout);
+    timeout = null;
     isRunning = false;
   };
   const addOne = () => {
@@ -47,7 +48,9 @@ function Metronome() {
     dispatch(changeBPM({ bpm: newBPM }));
   };
   const handleChange = (event) => {
+    stopMetronome();
     dispatch(changeBPM({ bpm: event.target.value }));
+    startMetronome();
   };
   const handleClick = () => {
     if (isRunning === true) {

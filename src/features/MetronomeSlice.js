@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  bpm: 220,
+  bpm: Number(220),
+  isRunning: false,
 };
 
 const MetronomeSlice = createSlice({

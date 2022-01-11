@@ -4,7 +4,8 @@ import { changeBPM } from "../../features/MetronomeSlice";
 import "./Metronome.css";
 
 function Metronome() {
-  const bpm = useSelector((state) => state.metronome.bpm);
+  let bpm = useSelector((state) => state.metronome.bpm);
+
   const dispatch = useDispatch();
   // milli is bpm converted to milliseconds
   const milli = 60000 / bpm;
@@ -48,8 +49,9 @@ function Metronome() {
     dispatch(changeBPM({ bpm: newBPM }));
   };
   const handleChange = (event) => {
+    let switchToNumber = Number(event.target.value);
     stopMetronome();
-    dispatch(changeBPM({ bpm: event.target.value }));
+    dispatch(changeBPM({ bpm: switchToNumber }));
     startMetronome();
   };
   const handleClick = () => {

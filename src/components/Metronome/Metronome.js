@@ -1,6 +1,6 @@
 import { React } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { changeBPM } from "../../features/MetronomeSlice";
+import { changeBPM, changeIsRunning } from "../../features/MetronomeSlice";
 import "./Metronome.css";
 
 function Metronome() {
@@ -29,7 +29,7 @@ function Metronome() {
     console.log(timeout);
     if (!timeout & (isRunning === false)) {
       timeout = setTimeout(metronomeFlash, milli);
-      isRunning = true;
+      dispatch(changeIsRunning(true));
     }
   };
   const stopMetronome = () => {
@@ -40,7 +40,7 @@ function Metronome() {
     startStop.innerHTML = "Start";
     clearTimeout(timeout);
     timeout = null;
-    isRunning = false;
+    dispatch(changeIsRunning(false));
   };
   const addOne = () => {
     const newBPM = bpm + 1;

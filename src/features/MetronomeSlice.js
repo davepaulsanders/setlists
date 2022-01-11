@@ -14,10 +14,10 @@ const MetronomeSlice = createSlice({
       //Can't figure out how to properly update the state
     },
     changeIsRunning: (state, action) => {
-      return (state = action.payload);
+      state.isRunning = action.payload;
     },
   },
 });
 
-export const { changeBPM } = MetronomeSlice.actions;
+export const { changeBPM, changeIsRunning } = MetronomeSlice.actions;
 export default MetronomeSlice.reducer;

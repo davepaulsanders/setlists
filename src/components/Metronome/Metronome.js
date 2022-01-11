@@ -38,7 +38,14 @@ function Metronome() {
     interval = null;
     isRunning = false;
   };
-
+  const addOne = () => {
+    const newBPM = bpm + 1;
+    dispatch(changeBPM({ bpm: newBPM }));
+  };
+  const subtractOne = () => {
+    const newBPM = bpm - 1;
+    dispatch(changeBPM({ bpm: newBPM }));
+  };
   const handleChange = (event) => {
     dispatch(changeBPM({ bpm: event.target.value }));
   };
@@ -53,7 +60,7 @@ function Metronome() {
     <div className="metronome" id="metronome">
       <p>{`${bpm} BPM`}</p>
       <div className="metronome-bpm-control">
-        <button>-</button>
+        <button onClick={subtractOne}>-</button>
         <input
           name="bpm"
           type="range"
@@ -63,7 +70,7 @@ function Metronome() {
           value={bpm}
           onChange={handleChange}
         ></input>
-        <button>+</button>
+        <button onClick={addOne}>+</button>
       </div>
       <button className="start-stop" id="startStop" onClick={handleClick}>
         Start

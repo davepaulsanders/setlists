@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    right: 1rem;
+    right: 3rem;
     background: rgb(62, 62, 170);
     border-radius: 50%;
     height: 20rem;
@@ -26,11 +26,9 @@
 
 @keyframes click {
     from {
-        height: 21rem;
-        width: 21rem;
+        transform: scale(1.025);
     }
     to {
-        height: 20rem;
-        width: 20rem;
+        transform: scale(1);
     }
 }

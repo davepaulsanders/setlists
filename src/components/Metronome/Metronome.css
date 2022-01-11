@@ -4,8 +4,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    right: 1rem;
+    background: rgb(62, 62, 170);
     border-radius: 50%;
-    padding: 4rem;
+    height: 20rem;
+    width: 20rem;
+    animation-iteration-count: infinite;
+    
 }
 
 .metronome-bpm-control {
@@ -16,4 +22,15 @@
 
 .start-stop {
     margin: 1rem;
+}
+
+@keyframes click {
+    from {
+        height: 21rem;
+        width: 21rem;
+    }
+    to {
+        height: 20rem;
+        width: 20rem;
+    }
 }

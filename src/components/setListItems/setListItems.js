@@ -5,7 +5,8 @@ import { deleteSong } from "../../features/setListSlice";
 import { changeBPM } from "../../features/MetronomeSlice";
 function SetListItems({ title, bpm, id }) {
   const dispatch = useDispatch();
-  const selectSong = (event) => {
+  const selectSong = () => {
+    bpm = Number(bpm);
     dispatch(changeBPM(bpm));
   };
   const handleClick = () => {

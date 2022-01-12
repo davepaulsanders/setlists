@@ -8,6 +8,7 @@
 }
 .setlist-container {
     z-index: 20;
+    
 }
 .songs-container:hover {
     background: rgb(32,33,36);

@@ -1,57 +1,75 @@
 .App {
     background: rgb(32,33,36);
 }
-
-.background-circle {
+.circ {
     position: absolute;
+    border-radius: 50%;
+}
+.background-circle {
     top: -300px;
     left: -200px;
     background: rgb(62,62,170);
-    border-radius: 50%;
     height: 500px;
     width: 500px;
 }
 
 .background-circle2 {
-    position: absolute;
     bottom: -250px;
     left: -50px;
     background: rgb(255, 179, 38);
-    border-radius: 50%;
     height: 400px;
     width: 400px;
     
 }
 .background-circle3 {
-    position: absolute;
     top: -250px;
     right: -50px;
     background: rgb(55, 160, 24);
-    border-radius: 50%;
     height: 400px;
     width: 400px;
     z-index: 1;
 }
 .background-circle4 {
-    position: absolute;
     top: 450px;
     right: 70px;
     background: rgb(137, 24, 212);
-    border-radius: 50%;
     height: 200px;
     width: 200px;
     z-index: 1;
 }
 .background-circle5 {
-    position: absolute;
     top: 200px;
     left: 200px;
     background: rgb(207, 50, 29);
-    border-radius: 50%;
     height: 300px;
     width: 300px;
     z-index: 1;
 }
+.background-circle6 {
+    top: 600px;
+    right: 200px;
+    background: rgb(238, 223, 13);
+    height: 500px;
+    width: 500px;
+    z-index: 1;
+}
+.background-circle7 {
+    top: 600px;
+    left: 400px;
+    background: rgb(213,0,250);
+    height: 400px;
+    width: 400px;
+    z-index: 1;
+}
+.background-circle8 {
+    top: 225px;
+    left: 600px;
+    background: rgb(55, 160, 24);
+    height: 325px;
+    width: 325px;
+    z-index: 1;
+}
+
 .page-title {
     margin-top: 1rem;;
     background: rgb(32,33,36);
@@ -69,7 +87,9 @@
     height: 17rem;
     background: rgb(32,33,36);
 }
-
+.setlist-container {
+    border: 2px solid rgb(32,33,36);
+}
 .page-title {
     font-weight: bold;
     position: relative;

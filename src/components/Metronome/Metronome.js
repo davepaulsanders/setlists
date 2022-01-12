@@ -28,7 +28,7 @@ function Metronome() {
   const startMetronome = () => {
     console.log(timeout);
     if (!timeout & (isRunning === false)) {
-      timeout = setTimeout(metronomeFlash, milli);
+      timeout = setTimeout(metronomeFlash);
       dispatch(changeIsRunning(true));
     }
   };
@@ -54,7 +54,6 @@ function Metronome() {
     let switchToNumber = Number(event.target.value);
     stopMetronome();
     dispatch(changeBPM(switchToNumber));
-    startMetronome();
   };
   const handleClick = () => {
     if (isRunning === true) {
@@ -65,7 +64,10 @@ function Metronome() {
   };
   return (
     <div className="metronome" id="metronome">
-      <p>{`${bpm} BPM`}</p>
+      <p className="metronome-bpm-label">
+        <span className="bpm">{bpm}</span>
+        <span className="bpm-label">BPM</span>
+      </p>
       <div className="metronome-bpm-control">
         <button onClick={subtractOne}>-</button>
         <input

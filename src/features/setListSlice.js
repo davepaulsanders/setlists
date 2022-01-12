@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = [
   {
     id: Date.now(),
-    title: "song1",
+    title: "Church Street Blues",
     bpm: 150,
   },
 ];

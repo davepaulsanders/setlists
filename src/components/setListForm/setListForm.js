@@ -10,6 +10,10 @@ export const SetListForm = () => {
 
   const onSubmit = (event) => {
     event.preventDefault();
+    if (bpm < 40 || bpm > 400) {
+      window.alert("That tempo is too extreme!");
+      return;
+    }
     dispatch(
       addSong({
         title: value,

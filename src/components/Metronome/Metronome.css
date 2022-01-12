@@ -13,6 +13,14 @@
     animation-iteration-count: infinite;
     
 }
+input[type="range"] {
+    height: .15rem;
+    color: rgb(226,226,226);
+}
+.bpm {
+    font-size: 4rem;
+    padding: .2rem;    
+}
 
 .metronome-bpm-control {
     display: flex;

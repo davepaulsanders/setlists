@@ -13,17 +13,15 @@ function SetListItems({ title, bpm, id }) {
   };
 
   return (
-    <div className="songs-container" onClick={selectSong}>
-      <span>
-        <li className="setlist-container">
-          <p>{title}</p>
-          <p>{bpm} BPM</p>
-          <button onClick={handleClick} className="delete-button">
-            x
-          </button>
-        </li>
-      </span>
-    </div>
+    <li className="setlist-container">
+      <div className="songs-container" onClick={selectSong}>
+        <p>{title}</p>
+        <p>{bpm} BPM</p>
+        <button onClick={handleClick} className="delete-button">
+          x
+        </button>
+      </div>
+    </li>
   );
 }
 

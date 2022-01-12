@@ -6,7 +6,7 @@ import SetList from "../src/components/setList/setList";
 export const App = () => {
   return (
     <div className="App">
-      <h1 className="page-title">Setlist</h1>
+      <h1 className="page-title">Setlist Creator</h1>
       <hr></hr>
       <div className="setlist-actions">
         <SetList />

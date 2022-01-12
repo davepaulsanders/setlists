@@ -1,17 +1,48 @@
 .setlist-form-container {
-    text-align: center;
-    background: rgb(32,33,36)
-}
-.form-elements {
-    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(32,33,36);
+    margin: 0;
+    padding: 0;
+   
 }
 
+.form-elements {
+    font-size: 1.25rem;
+    width: 20rem;
+    margin: 0.5rem;
+    
+}
+
+.form-elements::placeholder {
+    color: rgb(32,33,36)
+}
+
+.song-submit{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+}
+
+.bpm-submit {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+}
 .add-button {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     padding: .5rem 2rem .5rem 2rem;
-    margin: 1rem;
     color: white;
     background: transparent;
     border: 2px solid white;
+    border-radius: 25px;;
     cursor: pointer;
+}
+
+.add-button:hover {
+    color: grey;
+    border: 2px solid grey;
 }

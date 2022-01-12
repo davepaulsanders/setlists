@@ -24,33 +24,33 @@ export const SetListForm = () => {
   return (
     <div className="setlist-form-container">
       <form onSubmit={onSubmit}>
-        <input
-          className="form-elements"
-          placeholder="Type in a song!"
-          type="text"
-          id="title"
-          name="title"
-          value={value}
-          onChange={(event) => setValue(event.target.value)}
-        ></input>
-        <label className="form-elements" htmlFor="title">
-          Song Title
-        </label>
-        <input
-          className="form-elements"
-          placeholder="BPM"
-          id="bpm"
-          name="bpm"
-          min="40"
-          max="400"
-          step="1"
-          bpm={value}
-          onChange={(event) => setBPM(event.target.value)}
-        ></input>
-        <label className="form-elements" htmlFor="bpm">
-          BPM
-        </label>
-        <button className="form-elements add-button">Add song</button>
+        <div className="song-submit">
+          <input
+            className="form-elements"
+            placeholder="Type in a song to add!"
+            type="text"
+            id="title"
+            name="title"
+            value={value}
+            onChange={(event) => setValue(event.target.value)}
+          ></input>
+          <label className="form-elements" htmlFor="title"></label>
+        </div>
+        <div className="bpm-submit">
+          <input
+            className="form-elements"
+            placeholder="Choose a BPM"
+            id="bpm"
+            name="bpm"
+            min="40"
+            max="400"
+            step="1"
+            bpm={value}
+            onChange={(event) => setBPM(event.target.value)}
+          ></input>
+          <label className="form-elements" htmlFor="bpm"></label>
+          <button className="form-elements add-button">Add song</button>
+        </div>
       </form>
     </div>
   );

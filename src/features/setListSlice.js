@@ -20,7 +20,7 @@ const SetListSlice = createSlice({
         window.alert("Already in setlist!");
         return;
       }
-      console.log(existsInArray);
+
       const newSong = {
         key: Date.now,
         id: Date.now(),

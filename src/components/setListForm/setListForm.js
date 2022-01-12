@@ -50,7 +50,7 @@ export const SetListForm = () => {
         <label className="form-elements" htmlFor="bpm">
           BPM
         </label>
-        <button className="form-elements">Add song</button>
+        <button className="form-elements add-button">Add song</button>
       </form>
     </div>
   );

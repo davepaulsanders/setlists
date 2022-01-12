@@ -6,11 +6,11 @@ function SetList() {
   const songs = useSelector((state) => state.setlist);
   return (
     <div className="setlist-container">
-      <ul>
+      <ol type="1">
         {songs.map((song) => (
           <SetListItems title={song.title} id={song.id} bpm={song.bpm} />
         ))}
-      </ul>
+      </ol>
     </div>
   );
 }

@@ -69,7 +69,9 @@ function Metronome() {
         <span className="bpm-label">BPM</span>
       </p>
       <div className="metronome-bpm-control">
-        <button onClick={subtractOne}>-</button>
+        <button className="increment-decrement decrement" onClick={subtractOne}>
+          –
+        </button>
         <input
           name="bpm"
           type="range"
@@ -79,7 +81,9 @@ function Metronome() {
           value={bpm}
           onChange={handleChange}
         ></input>
-        <button onClick={addOne}>+</button>
+        <button className="increment-decrement" onClick={addOne}>
+          +
+        </button>
       </div>
       <button className="start-stop" id="startStop" onClick={handleClick}>
         Start

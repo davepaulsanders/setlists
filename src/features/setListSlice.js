@@ -22,6 +22,7 @@ const SetListSlice = createSlice({
       }
       console.log(existsInArray);
       const newSong = {
+        key: Date.now,
         id: Date.now(),
         title: action.payload.title,
         bpm: action.payload.bpm,

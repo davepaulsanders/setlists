@@ -8,17 +8,32 @@
 }
 
 .songs-container:hover {
-    background: pink;
+    background: rgb(32,33,36);
+    cursor: pointer;
 }
 
+.songs-container:hover > p {
+ color:rgb(226 226 226);
+}
+.songs-container:hover > button {
+    color:rgb(226 226 226);
+   }
 p {
     font-size: 1.5rem;
+    color: rgb(32,33,36);
     margin: 1rem;
 }
 
 .delete-button {
-    color: white;
-    background-color: black;
-    border: 2px solid red;
-    padding: .2rem .4rem .2rem .4rem;
+    font-size: 2rem;
+    position: relative;
+    bottom: .15rem;
+    background: transparent;
+    color: rgb(32,33,36);
+    border: none;
+    cursor: pointer;
+}
+.delete-button:hover {
+    color: rgb(226 226 226);
+    
 }

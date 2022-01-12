@@ -15,10 +15,10 @@ function SetListItems({ title, bpm, id }) {
   return (
     <li className="setlist-container">
       <div className="songs-container" onClick={selectSong}>
-        <p>{title}</p>
+        <p className="song-details">{title}</p>
         <p>{bpm} BPM</p>
         <button onClick={handleClick} className="delete-button">
-          x
+          X
         </button>
       </div>
     </li>

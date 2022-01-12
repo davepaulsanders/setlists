@@ -4,13 +4,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    right: 3rem;
     background: rgb(62, 62, 170);
     border-radius: 50%;
     height: 20rem;
     width: 20rem;
     animation-iteration-count: infinite;
+    z-index: 10;
     
 }
 

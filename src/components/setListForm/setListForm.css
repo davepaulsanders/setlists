@@ -2,10 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(32,33,36);
-    margin: 0;
+    background: transparent;
+    margin-top: 1.5rem;
     padding: 0;
-   
+    position: relative;
+    z-index: 20;
 }
 
 .form-elements {
@@ -18,7 +19,9 @@
 .form-elements::placeholder {
     color: rgb(32,33,36)
 }
-
+input:focus::placeholder {
+    color: transparent;
+  }
 .song-submit{
     display: flex;
     flex-direction: column;

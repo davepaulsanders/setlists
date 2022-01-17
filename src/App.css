@@ -1,9 +1,10 @@
 .App {
-    background-image: url("../src/audio/test-background.png");
+    background: rgb(255,238,234);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    text-align: center;
 }
 .circ {
     position: absolute;
@@ -12,12 +13,12 @@
 
 .logo {
     
-    margin: 3rem 2rem 2rem 10rem;
+    margin: 3rem 2rem 2rem 2rem;
     width: 40rem;
 }
 .setlist-actions {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     margin: 2rem 2rem 2rem 10rem;
     height: 17rem;
@@ -31,6 +32,7 @@
  }   
 }
 .setlist-container {
+    
     border: 1px solid rgb(32,33,36);
 }
 .page-title {

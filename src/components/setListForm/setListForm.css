@@ -1,10 +1,9 @@
 .setlist-form-container {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     background: transparent;
     margin-top: 1.5rem;
-    margin-left: 13.5rem;
     padding: 0;
     position: relative;
     z-index: 20;
@@ -14,6 +13,8 @@
     font-size: 1.0rem;
     width: 20rem;
     margin: 0.5rem;
+    border-radius: 30px;
+    text-align: center;
     
 }
 
@@ -40,8 +41,8 @@ input:focus::placeholder {
     font-size: 1.0rem;
     padding: .5rem 2rem .5rem 2rem;
     color: white;
-    background: transparent;
-    border: 2px solid white;
+    background: rgb(255,71,21);
+    border: 2px solid rgb(32,33,36);
     border-radius: 25px;;
     cursor: pointer;
 }

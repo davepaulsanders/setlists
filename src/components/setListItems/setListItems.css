@@ -5,9 +5,11 @@
     justify-content: left;
     align-items: center;
     overflow: hidden;
+    background: white;
 }
 .setlist-container {
     z-index: 20;
+    border-radius: 30px;
     
 }
 .songs-container:hover {

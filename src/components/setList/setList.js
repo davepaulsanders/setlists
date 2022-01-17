@@ -8,7 +8,12 @@ function SetList() {
     <div className="setlist-container">
       <ul type="1">
         {songs.map((song) => (
-          <SetListItems title={song.title} id={song.id} bpm={song.bpm} />
+          <SetListItems
+            key={Date.now()}
+            title={song.title}
+            id={song.id}
+            bpm={song.bpm}
+          />
         ))}
       </ul>
     </div>

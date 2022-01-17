@@ -1,16 +1,17 @@
 .setlist-form-container {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     background: transparent;
     margin-top: 1.5rem;
+    margin-left: 13.5rem;
     padding: 0;
     position: relative;
     z-index: 20;
 }
 
 .form-elements {
-    font-size: 1.25rem;
+    font-size: 1.0rem;
     width: 20rem;
     margin: 0.5rem;
     
@@ -36,7 +37,7 @@ input:focus::placeholder {
     align-items: center;
 }
 .add-button {
-    font-size: 1.25rem;
+    font-size: 1.0rem;
     padding: .5rem 2rem .5rem 2rem;
     color: white;
     background: transparent;

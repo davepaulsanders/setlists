@@ -3,29 +3,33 @@ import { useDispatch } from "react-redux";
 import "./setListForm.css";
 import { addSong } from "../../features/setListSlice";
 
-// importing song list from JSON server
-
-const fetchSongs = async () => {
-  try {
-    const response = await fetch(
-      "https://api.jsonbin.io/b/61e03c010f639830851b73e1"
-    );
-    if (response.ok) {
-      const jsonResponse = await response.json();
-      return jsonResponse;
-    }
-    throw new Error("Request Failed!");
-  } catch (error) {
-    console.log(error);
-  }
-};
+//loading the file locally to avoid too many calls to free server
 const songs = require("../../songdata/jazz-standards.json");
 
 export const SetListForm = () => {
+  //const [songs, setSongs] = useState([]);
   const [value, setValue] = useState([]);
   const [bpm, setBPM] = useState([]);
   const dispatch = useDispatch();
 
+  // useEffect(() => {
+  //   // pulls data from free server I set up under my gmail
+  //   (async () => {
+  //     try {
+  //       const response = await fetch(
+  //         "https://api.jsonbin.io/b/61e04ba80f639830851b89c1"
+  //       );
+  //       if (response.ok) {
+  //         const jsonResponse = await response.json();
+  //         setSongs(jsonResponse);
+  //         return;
+  //       }
+  //       throw new Error("Request Failed!");
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   })();
+  // }, []);
   const onSubmit = (event) => {
     event.preventDefault();
     if (bpm < 40 || bpm > 400) {
@@ -55,7 +59,9 @@ export const SetListForm = () => {
           ></input>
           <datalist id="song-titles">
             {songs.map((song) => (
-              <option year={song.Year}>{song.Standard}</option>
+              <option key={song.Standard} year={song.Year}>
+                {song.Standard}
+              </option>
             ))}
           </datalist>
           <label className="form-elements" htmlFor="title"></label>

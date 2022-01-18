@@ -5,11 +5,11 @@ import "./setList.css";
 function SetList() {
   const songs = useSelector((state) => state.setlist);
   return (
-    <div className="setlist-container">
+    <div className="setlist">
       <ul type="1">
         {songs.map((song) => (
           <SetListItems
-            key={Date.now()}
+            key={song.key}
             title={song.title}
             id={song.id}
             bpm={song.bpm}

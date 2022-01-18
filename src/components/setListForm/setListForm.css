@@ -13,14 +13,21 @@
     font-size: 1.0rem;
     width: 20rem;
     margin: 0.5rem;
-    border-radius: 30px;
+    border-radius: 7px;
     text-align: center;
     
 }
+input[type="text"], textarea {
 
+    background-color : rgb(249, 249, 249)
+  
+  }
 .form-elements::placeholder {
-    color: rgb(32,33,36)
+    color: rgb(32,33,36);
+    
 }
+
+
 input:focus::placeholder {
     color: transparent;
   }
@@ -37,17 +44,18 @@ input:focus::placeholder {
     justify-content: left;
     align-items: center;
 }
+
+
 .add-button {
     font-size: 1.0rem;
     padding: .5rem 2rem .5rem 2rem;
     color: white;
     background: rgb(255,71,21);
     border: 2px solid rgb(32,33,36);
-    border-radius: 25px;;
+    border-radius: 7px;
     cursor: pointer;
 }
 
 .add-button:hover {
-    color: grey;
-    border: 2px solid grey;
+    background: rgb(189, 122, 122);
 }

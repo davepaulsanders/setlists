@@ -9,13 +9,14 @@ export const App = () => {
     <div className="App">
       <img className="logo" src={logo} alt="logo"></img>
       <hr></hr>
-      <div className="setlist-actions">
-        <div className="setlist-container">
+      <div className="setlist-grid">
+        <div className="setlist-actions">
           <SetList />
         </div>
-        <Metronome />
+        <div className="metronome-container">
+          <Metronome />
+        </div>
       </div>
-      <hr></hr>
       <SetListForm />
     </div>
   );

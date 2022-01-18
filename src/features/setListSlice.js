@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = [
   {
+    key: Date.now(),
     id: Date.now(),
     title: "Church Street Blues",
     bpm: 150,
@@ -22,7 +23,7 @@ const SetListSlice = createSlice({
       }
 
       const newSong = {
-        key: Date.now,
+        key: Date.now(),
         id: Date.now(),
         title: action.payload.title,
         bpm: action.payload.bpm,

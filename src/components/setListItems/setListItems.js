@@ -5,7 +5,9 @@ import { deleteSong } from "../../features/setListSlice";
 import { changeBPM } from "../../features/MetronomeSlice";
 function SetListItems({ title, bpm, id }) {
   const dispatch = useDispatch();
-  const selectSong = () => {
+  const selectSong = (event) => {
+    //add something that changes all the stuff inside the selected box
+
     bpm = Number(bpm);
     dispatch(changeBPM(bpm));
   };
@@ -14,15 +16,14 @@ function SetListItems({ title, bpm, id }) {
   };
 
   return (
-    <li className="setlist-container">
-      <div className="songs-container" onClick={selectSong}>
-        <p className="song-details">{title}</p>
-        <p>{bpm} BPM</p>
-        <button onClick={handleClick} className="delete-button">
-          X
-        </button>
-      </div>
-    </li>
+    <div className="setlist-container" onClick={selectSong}>
+      <li className="songs-container" id="songs-container">
+        <p className="song-details" id="title">
+          {title}
+        </p>
+        <p id="bpm-label">{bpm} BPM</p>
+      </li>
+    </div>
   );
 }
 

@@ -79,8 +79,8 @@ export const SetListForm = () => {
             onChange={(event) => setBPM(event.target.value)}
           ></input>
           <label className="form-elements" htmlFor="bpm"></label>
-          <button className="form-elements add-button">Add song</button>
         </div>
+        <button className="form-elements add-button">Add song</button>
       </form>
     </div>
   );

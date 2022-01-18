@@ -16,25 +16,29 @@
     margin: 3rem 2rem 2rem 2rem;
     width: 40rem;
 }
-.setlist-actions {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem 2rem 2rem 10rem;
-    height: 17rem;
-    background: transparent;
+.setlist-grid {
+    display: grid;
+    grid-template-areas: "a a b b c c";
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
     
 }
 
-@media only screen and (max-width: 981) {
- .setlist-actions {
-     background: black;
- }   
+.setlist-actions {
+    border-radius: 7px;
+    overflow: auto;
+    text-align: center;
+    max-height: 17rem;
+    min-width: 100%;
+    background: transparent;
+    grid-area: b;
 }
-.setlist-container {
-    
-    border: 1px solid rgb(32,33,36);
+
+.metronome-container {
+   grid-area: c;
+   
 }
+
 .page-title {
     font-weight: bold;
     position: relative;

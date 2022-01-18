@@ -1,3 +1,8 @@
+
+.setlist-container {
+    z-index: 20;
+    
+}
 .songs-container {
     padding: 0rem 5rem 0rem 5rem;
     display: flex;
@@ -5,25 +10,20 @@
     justify-content: left;
     align-items: center;
     overflow: hidden;
-    background: white;
+    background: rgb(249, 249, 249);
+    border-bottom: 1px solid black;
 }
-.setlist-container {
-    z-index: 20;
-    border-radius: 30px;
-    
-}
+
+
 .songs-container:hover {
-    background: rgb(32,33,36);
+    background: rgb(255,71,21);
     cursor: pointer;
 }
 
 .songs-container:hover > p {
- color:rgb(226 226 226);
+ color: white;
 }
-.songs-container:hover > button {
-    color:rgb(226 226 226);
-    border: 2px solid rgb(226 226 226);
-   }
+
 p {
     font-size: 1.0rem;
     color: rgb(32,33,36);
@@ -35,17 +35,5 @@ p {
 .song-details {
     flex-basis: 100%;
 }
-.delete-button {
-    font-size: 1.5rem;
-    background: transparent;
-    color: rgb(32,33,36);
-    border: 3px solid rgb(32,33,36);
-    cursor: pointer;
-}
-.delete-button:hover {
-    color: red !important;
-    border: 2px solid red !important;
-    
-    
-}
+
 

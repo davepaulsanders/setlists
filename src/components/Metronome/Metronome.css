@@ -13,7 +13,11 @@
     z-index: 10;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-
+@media only screen and (max-width: 1262px) {
+    .metronome {
+        display: none;
+    }       
+}
 .increment-decrement {
     
     font-size: 3rem;
@@ -35,8 +39,9 @@
 input[type="range"] {
     height: .15rem;
     cursor: pointer;
-    
 }
+
+
 
 .bpm {
     font-size: 3rem;
@@ -65,6 +70,7 @@ input[type="range"] {
     border: 2px solid white;
     border-radius: 7px;
     cursor: pointer;
+    font-family: 'Quicksand';
 }
 .start-stop:hover {
     color: rgb(32,33,36);

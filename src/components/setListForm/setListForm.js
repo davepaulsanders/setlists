@@ -32,6 +32,11 @@ export const SetListForm = () => {
   // }, []);
   const onSubmit = (event) => {
     event.preventDefault();
+    if (value.length > 40) {
+      window.alert("That title is too long!");
+      return;
+    }
+
     if (bpm < 40 || bpm > 400) {
       window.alert("That tempo is too extreme!");
       return;

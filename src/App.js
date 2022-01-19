@@ -31,6 +31,7 @@ export const App = () => {
               type="text"
               placeholder="Password"
             ></input>
+            <button className="login-button">Log in</button>
           </form>
         </div>
       </div>

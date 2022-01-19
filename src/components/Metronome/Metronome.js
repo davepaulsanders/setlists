@@ -76,6 +76,7 @@ function Metronome() {
           –
         </button>
         <input
+          className="slider"
           name="bpm"
           type="range"
           step="1"

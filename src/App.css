@@ -1,26 +1,39 @@
 .login-container {
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    margin: 12rem auto;
+    margin: 6rem auto;
     background: white;
     border-radius: 7px;
     padding: 2rem;
-    min-width: 40%;
-    max-width: 40%;
+    min-width: 30rem;
+    max-width: 30rem;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-.username, .password {
+.login-prompt {
+    padding-bottom: 1.5rem;
+    font-size: 1.25rem;
+    color: black;
+}
+.username, .password, .login-button {
     font-size: 1rem;
     margin: .5rem;
     border-radius: 7px;
     text-align: center;
+    padding: .25rem;
+    font-family: 'Quicksand';
 }
 
-.login-prompt {
-    padding-bottom: 2rem;
-    font-size: 1.5rem;
-    color: black;
+.login-button {
+    display: block;
+    margin: .5rem auto;
+    padding: .25rem 2rem .25rem 2rem;
+    background: rgb(255, 71, 21);
+    color: white;
+    
 }
+
+
 .App {
     background: rgb(255,238,234);
     background-position: center;
@@ -41,18 +54,32 @@
 }
 .setlist-grid {
     display: grid;
-    grid-template-areas: "a a b b c c";
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: " . . b b c c";
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
     justify-items: center;
     
 }
 
+
+@media only screen and (max-width: 708px) {
+    .setlist-grid {
+        grid-template-areas: "b";
+        grid-template-columns: minmax(0, 100%);
+    }    
+    .setlist-actions {
+        max-width: 100%;
+    min-width: 375px;
+    }
+    .logo {
+            margin: 1.5rem 0 1.5rem 0;
+            width: 20rem;
+    }
+}
 .setlist-actions {
     border-radius: 7px;
     overflow: auto;
     text-align: center;
     max-height: 17rem;
-    min-width: 100%;
     background: transparent;
     grid-area: b;
     align-self: start;

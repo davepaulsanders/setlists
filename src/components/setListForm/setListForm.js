@@ -1,6 +1,6 @@
-import { React, useState, useEffect } from "react";
+import { React, useState } from "react";
 import { useDispatch } from "react-redux";
-import "./setListForm.css";
+//import "./setListForm.css";
 import { addSong } from "../../features/setListSlice";
 
 //loading the file locally to avoid too many calls to free server
@@ -49,12 +49,15 @@ export const SetListForm = () => {
     );
   };
   return (
-    <div className="setlist-form-container">
-      <form onSubmit={onSubmit}>
-        <div className="song-submit">
+    <div className="setlist-container">
+      <form
+        className="flex justify-center items-center flex-col"
+        onSubmit={onSubmit}
+      >
+        <div className=" song-submit">
           <input
             list="song-titles"
-            className="form-elements"
+            className="form-elements p-2 rounded-md w-60 border border-black"
             placeholder="Type in a song to add!"
             type="text"
             id="title"
@@ -73,7 +76,7 @@ export const SetListForm = () => {
         </div>
         <div className="bpm-submit">
           <input
-            className="form-elements"
+            className="form-elements p-2 rounded-md w-60 mt-3 border border-black"
             placeholder="Choose a BPM"
             id="bpm"
             name="bpm"
@@ -85,7 +88,9 @@ export const SetListForm = () => {
           ></input>
           <label className="form-elements" htmlFor="bpm"></label>
         </div>
-        <button className="form-elements add-button">Add song</button>
+        <button className="bg-primary mt-3 p-3 rounded-md text-white">
+          Add song
+        </button>
       </form>
     </div>
   );

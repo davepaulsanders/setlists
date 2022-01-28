@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import SetListItems from "../setListItems/setListItems";
-import "./setList.css";
+//import "./setList.css";
 function SetList() {
   const songs = useSelector((state) => state.setlist);
   return (

@@ -1,7 +1,7 @@
 import { React } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { changeBPM, changeIsRunning } from "../../features/MetronomeSlice";
-import "./Metronome.css";
+//import "./Metronome.css";
 
 function Metronome() {
   let bpm = useSelector((state) => state.MetronomeSlice.bpm);
@@ -63,14 +63,18 @@ function Metronome() {
     }
   };
   return (
-    <div className="metronome" id="metronome">
+    <div
+      className="metronome flex hidden lg:block  justify-center flex-col w-64 h-64 items-center bg-purple rounded-full mb-5 shadow-lg
+      "
+      id="metronome"
+    >
       <p className="metronome-bpm-label">
-        <span className="bpm">{bpm}</span>
-        <span className="bpm-label">BPM</span>
+        <span className="bpm text-white">{bpm}</span>
+        <span className="bpm-label text-white">BPM</span>
       </p>
-      <div className="metronome-bpm-control">
+      <div className="metronome-bpm-control flex justify-center">
         <button
-          className="increment-decrement decrement"
+          className="decrement text-4xl bg-transparent border border-purple hover:border-white px-3 py-1 rounded-md text-white"
           onClick={subtractFive}
         >
           –
@@ -85,11 +89,18 @@ function Metronome() {
           value={bpm}
           onChange={handleChange}
         ></input>
-        <button className="increment-decrement" onClick={addFive}>
+        <button
+          className="increment text-4xl bg-transparent border border-purple hover:border-white px-3 py-1 rounded-md text-white"
+          onClick={addFive}
+        >
           +
         </button>
       </div>
-      <button className="start-stop" id="startStop" onClick={handleClick}>
+      <button
+        className="start-stop bg-transparent border-purple hover:border-white my-0 px-3 py-1 w-16 rounded-md text-white border"
+        id="startStop"
+        onClick={handleClick}
+      >
         Start
       </button>
       <span className="mute-sound"></span>

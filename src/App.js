@@ -1,7 +1,7 @@
 import React from "react";
-import "./App.css";
 import { SetListForm } from "../src/components/setListForm/setListForm";
-import Metronome from "../src/components/Metronome/Metronome";
+//import Metronome from "../src/components/Metronome/Metronome";
+import MiniMetronome from "../src/components/MiniMetronome/MiniMetronome";
 import SetList from "../src/components/setList/setList";
 import logo from "./audio/setlists-logo.png";
 let isLoggedIn = true;
@@ -38,15 +38,18 @@ export const App = () => {
     );
   } else {
     return (
-      <div className="App">
-        <img className="logo" src={logo} alt="setlist-creator-logo"></img>
-        <hr></hr>
-        <div className="setlist-grid">
-          <div className="setlist-actions">
+      <div className="App flex justify-center items-center flex-col m-0 p-0">
+        <img
+          className="logo pt-5 px-3 w-50 pb-5 max-w-400"
+          src={logo}
+          alt="setlist-creator-logo"
+        ></img>
+        <div className="setlist-grid w-80 md:w-1/2 max-w-2xl">
+          <div className="setlist-actions rounded-md bg-white overflow-auto shadow-md max-h-96 mb-5">
             <SetList />
           </div>
-          <div className="metronome-container">
-            <Metronome />
+          <div className="metronome-container flex justify-center w-100">
+            <MiniMetronome />
           </div>
         </div>
         <SetListForm />

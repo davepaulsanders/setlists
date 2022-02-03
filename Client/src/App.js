@@ -7,7 +7,7 @@ import logo from "./audio/setlists-logo.png";
 export const App = () => {
   const [userName, setUserName] = useState("");
   const [passWord, setPassword] = useState("");
-  const [logIn, setLogIn] = useState(false);
+  const [logIn, setLogIn] = useState(true);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -34,13 +34,12 @@ export const App = () => {
     return (
       <div className="App flex flex-col items-center">
         <img
-          className="logo mt-24 mb-8"
+          className="logo w-80 md:w-3/5 max-w-2xl mt-24 mb-8"
           src={logo}
-          style={{ width: "20rem" }}
           alt="setlist-creator-logo"
         ></img>
 
-        <div className="login-container bg-white border-2 border-black rounded px-5 py-10 flex flex-col justify-center items-center">
+        <div className="login-container md:w-3/5 max-w-2xl bg-white border-2 border-black rounded-md px-5 py-10 flex flex-col justify-center items-center">
           <h1 className="login-prompt mb-2 text-2xl">
             Please <span className="text-purple font-bold">log in</span> to save
             setlists!

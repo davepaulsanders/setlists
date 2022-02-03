@@ -19,16 +19,19 @@ app.post("/login", (req, res) => {
   const userName = req.body.userName;
   const passWord = req.body.passWord;
 
-  db.query("SELECT * FROM users", [userName, passWord], (err, result) => {
-    if (err) {
-      res.send({ err: err });
+  db.query(
+    `SELECT * FROM users WHERE username = '${userName}' AND password = '${passWord}'`,
+    (err, result) => {
+      if (err) {
+        res.send({ err: err });
+      }
+      if (result.length > 0) {
+        res.send(result);
+      } else {
+        res.send({ message: "You don't have an account bitch!" });
+      }
     }
-    if (result) {
-      res.send(result);
-    } else {
-      res.send({ message: "You don't have an account bitch!" });
-    }
-  });
+  );
 });
 app.listen(3001, () => {
   console.log("Server is listening on Port 3001");

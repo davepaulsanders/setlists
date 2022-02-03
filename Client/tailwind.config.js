@@ -8,6 +8,7 @@ module.exports = {
       pink: "rgb(255,24,126)",
       purple: "rgb(165, 0, 187)",
       black: "rgb(0,0,0)",
+      gray: "rgb(200,200,200)",
     },
     extend: {},
 

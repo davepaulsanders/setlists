@@ -14,7 +14,7 @@ const MiniMetronome = () => {
     "w-8 hidden mr-2 invert-0 hover:invert"
   );
   const [metronomeClass, setMetronomeClass] = useState(
-    "flex group shadow-lg items-center w-60 md:h-32 rounded-lg bg-primary p-3 mb-5"
+    "flex w-9/12 items-center justify-center group shadow-lg mt-52 h-24 md:h-32 rounded-lg bg-primary p-3 mb-5"
   );
   const dispatch = useDispatch();
   let width = window.innerWidth;

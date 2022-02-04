@@ -36,3 +36,19 @@ app.post("/login", (req, res) => {
 app.listen(3001, () => {
   console.log("Server is listening on Port 3001");
 });
+
+app.post("/register", (req, res) => {
+  const userName = req.body.userName;
+  const passWord = req.body.passWord;
+
+  db.query(
+    `INSERT INTO users (username, password) VALUES ('${userName}', '${passWord}')`,
+    (err, result) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send(result);
+      }
+    }
+  );
+});

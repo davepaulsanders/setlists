@@ -8,8 +8,6 @@ import { useNavigate } from "react-router-dom";
 
 export const App = () => {
   let logIn = useSelector((state) => state.LogInSlice.logIn);
-  const [userName, setUserName] = useState("");
-  const [passWord, setPassword] = useState("");
 
   const navigate = useNavigate();
 
@@ -17,7 +15,7 @@ export const App = () => {
     if (logIn === false) {
       navigate("/login");
     }
-  }, []);
+  });
   return (
     <div className="App flex justify-center items-center flex-col m-0 p-0">
       <img

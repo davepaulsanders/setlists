@@ -1,6 +1,6 @@
 # Setlists
 
-This project allows a user to log in and create setlists and save them to their account. In addition, it includes a pulsing metronome that automatically adjusts to the BPM of the selected song.
+This project allows a user to log in or register and create setlists and save them to their account. In addition, it includes a pulsing metronome that automatically adjusts to the BPM of the selected song.
 
 ## Technologies Used
 
@@ -17,11 +17,14 @@ Before you get started, make sure you have the following software installed on y
 ## Installation
 
 1. Clone the repo
-2. Create a new database called "Setlists"
-3. Open up editor of your choice and run npm install
-4. Make sure server instance is running.
-5. Open Server folder and `run npm start`
-6. Open Client folder and `run npm start`
+2. Create a new MySQL database called "Setlists"
+3. Queries to create the users table in the database are in the db folder as setlists.sql
+4. Open up editor of your choice and run npm install
+5. Make sure server instance is running.
+6. Open Server folder and `run npm start`
+7. Open Client folder and `run npm start`
+
+This should open a browser and allow you to interact with the site.
 
 ### Future plans
 

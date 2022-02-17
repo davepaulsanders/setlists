@@ -25,11 +25,13 @@ Before you get started, make sure you have the following software installed on y
 7. Open Client folder and `run npm start`
 
 This should open a browser and allow you to interact with the site.
+The datalist info in the song from is being added from a local file, but there is also a useEffect() in SetListForm.js that can be used to pull the data from a mock server instead.
 
 ### Future plans
 
 - Adding JWT Authentication
 - Upload database schema to Github to allow full download of project
+- Add song list data to setlists database
 
 ## Screenshots
 

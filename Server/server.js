@@ -3,16 +3,18 @@ const mysql = require("mysql");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const app = express();
+const creds = require("../Server/dbpasswords.json");
+const servercreds = creds[0];
 
 app.use(cors());
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 const db = mysql.createConnection({
-  user: "root",
-  host: "localhost",
-  password: "888442Dd!",
-  database: "Setlists",
+  user: servercreds.user,
+  host: servercreds.host,
+  password: servercreds.password,
+  database: servercreds.database,
 });
 
 app.post("/login", (req, res) => {

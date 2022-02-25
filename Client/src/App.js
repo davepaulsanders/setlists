@@ -5,7 +5,7 @@ import MiniMetronome from "../src/components/MiniMetronome/MiniMetronome";
 import SetList from "../src/components/setList/setList";
 import logo from "./audio/setlists-logo.png";
 import { useNavigate } from "react-router-dom";
-
+import { SavedSetlists } from "../src/components/SavedSetlists/SavedSetlists";
 export const App = () => {
   let logIn = useSelector((state) => state.LogInSlice.logIn);
 
@@ -32,6 +32,7 @@ export const App = () => {
         </div>
       </div>
       <SetListForm />
+      <SavedSetlists />
     </div>
   );
 };
